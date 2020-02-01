@@ -25,7 +25,7 @@ class CarsController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.car.add');
     }
 
     /**
@@ -36,7 +36,29 @@ class CarsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'file' => 'required|file|image|mimes:jpeg,png,jpg|max:2048',
+        ]);
+ 
+        $file = $request->file('file');
+        $nama_file = $file->getClientOriginalName();
+        
+        // isi dengan nama folder tempat kemana file diupload
+        $tujuan_upload = 'public/uploads';
+        
+        $file->move($tujuan_upload,$nama_file);
+
+        Cars::create([
+            'name' => $request->name,
+            'type' => $request->type,
+            'no' => $request->no,
+            'year' => $request->year,
+            'status' => $request->status,
+            'price' => $request->price,
+            'image' => $nama_file,
+        ]);
+
+        return redirect('/cars');
     }
 
     /**

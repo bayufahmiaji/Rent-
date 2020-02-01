@@ -2,7 +2,7 @@
 {{-- Page title --}}
 @section('title')
     
-    Cars JB Rent
+    @parent
 @stop
 {{-- page level styles --}}
 @section('header_styles')
@@ -55,33 +55,18 @@
                                     <th>Price</th>
                                     <th>Image</th>
                                     <th>Status</th>
-                                    <th>Action</th>    
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @foreach($car as $cars)
-                                    <tr>
-                                        <td>{{$cars->name}}</td>
-                                        <td>{{$cars->type}}</td>
-                                        <td>{{$cars->year}}</td>
-                                        <td>{{$cars->No}}</td>
-                                        <td>@currency($cars->price)</td>
-                                        <td><img width="150px" src="{{ url('/public/uploads/'.$cars->image) }}"></td>
-                                        <td>{{$cars->status}}</td>
-                                        <td><a href="" class="btn btn-primary">Update</a>
-                                        <a href="" class="btn btn-danger">Delete</a></td>
-                                    </tr>
-                                @endforeach
+                                    
                                 </tbody>
                                 <tfoot>
                                 <tr>
+                                    <th>ID</th>
                                     <th>Name</th>
-                                    <th>Type</th>
-                                    <th>Year</th>
-                                    <th>No</th>
-                                    <th>Price</th>
-                                    <th>Image</th>
-                                    <th>Status</th>
+                                    <th>Email</th>
+                                    <th>Role</th>
+                                    <th>Created At </th>
                                     <th>Action</th>
                                 </tr>
                                 </tfoot>

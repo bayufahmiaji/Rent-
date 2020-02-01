@@ -8,5 +8,5 @@ class Cars extends Model
 {
     protected $table = "Cars";
 
-    
+    protected $guarded = [];
 }

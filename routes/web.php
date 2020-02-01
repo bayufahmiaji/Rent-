@@ -24,4 +24,6 @@ route::get('/index','HomeController@index');
 route::get('/logout','AuthController@logout');
 
 route::get('/cars','CarsController@index');
+route::get('/car/add','CarsController@create');
+route::post('/cars/add','CarsController@store');
 route::get('/user','UserController@index');
