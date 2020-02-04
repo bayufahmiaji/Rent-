@@ -6,7 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Cars extends Model
 {
-    protected $table = "Cars";
+ 	protected $table = "cars";
 
     protected $guarded = [];
+
 }

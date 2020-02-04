@@ -5,13 +5,10 @@
     Selamat Datang JB Rent 
 @stop
 {{-- page level styles --}}
-@section('header_styles')
-    <link type="text/css" rel="stylesheet" href="{{asset('assets/vendors/chartist/css/chartist.min.css')}}" />
-    <link type="text/css" rel="stylesheet" href="{{asset('assets/vendors/circliful/css/jquery.circliful.css')}}">
-    <link type="text/css" rel="stylesheet" href="{{asset('assets/css/pages/index.css')}}">
-    <link type="text/css" rel="stylesheet" href="{{asset('assets/vendors/fullcalendar/css/fullcalendar.min.css')}}" />
-    <link type="text/css" rel="stylesheet" href="{{asset('assets/css/pages/calendar_custom.css')}}"/>
-    
+@section('header_styles') <!--Page level styles-->
+    <link type="text/css" rel="stylesheet" href="{{asset('assets/vendors/swiper/css/swiper.min.css')}}"/>
+    <!-- end of page level styles -->
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/pages/widgets.css')}}">
 @stop
 
 
@@ -31,27 +28,35 @@
         </div>
     </header>
     <div class="outer">
-        <div class="inner bg-container">
-              
-	    </div>       
+               <div class="row">
+                    <div class="col-lg-12">
+                        <div class="swiper-container widget_swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="{{asset('assets/img/swiper_image1.jpg')}}" alt="Image missing" class="img-fluid"/>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="{{asset('assets/img/swiper_image2.jpg')}}" alt="Image missing" class="img-fluid"/>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="{{asset('assets/img/swiper_image3.jpg')}}" alt="Image missing" class="img-fluid"/>
+                                </div>
+                            </div>
+                            <!-- Add Pagination -->
+                            <div class="swiper-pagination"></div>
+                            <!-- Add Arrows -->
+                        </div>
+                    </div>
+                </div>
 	</div>
 @stop
 @section('footer_scripts')
     <!--  plugin scripts -->
-    <script type="text/javascript" src="{{asset('assets/vendors/moment/js/moment.min.js')}}"></script>
-    <script type="text/javascript" src="{{asset('assets/vendors/fullcalendar/js/fullcalendar.min.js')}}"></script>
-    <script type="text/javascript" src="{{asset('assets/js/pluginjs/calendarcustom.js')}}" ></script>
-    <script type="text/javascript" src="{{asset('assets/js/pages/calendar.js')}}"></script>
-    <script type="text/javascript" src="{{asset('assets/vendors/countUp.js/js/countUp.min.js')}}"></script>
-    <script type="text/javascript" src="{{asset('assets/vendors/flip/js/jquery.flip.min.js')}}"></script>
-    <script type="text/javascript" src="{{asset('assets/js/pluginjs/jquery.sparkline.js')}}"></script>
-    <script type="text/javascript" src="{{asset('assets/vendors/chartist/js/chartist.min.js')}}"></script>
-    <script type="text/javascript" src="{{asset('assets/js/pluginjs/chartist-tooltip.js')}}"></script>
-    <script type="text/javascript" src="{{asset('assets/vendors/swiper/js/swiper.min.js')}}"></script>
-    <script type="text/javascript" src="{{asset('assets/vendors/circliful/js/jquery.circliful.js')}}"></script>
-    <script type="text/javascript" src="{{asset('assets/vendors/flotchart/js/jquery.flot.js')}}" ></script>
-    <script type="text/javascript" src="{{asset('assets/vendors/flotchart/js/jquery.flot.resize.js')}}"></script>
-    <!--end of plugin scripts-->
-
     <script type="text/javascript" src="{{asset('assets/js/pages/index.js')}}"></script>
+        <script type="text/javascript" src="{{asset('assets/vendors/moment/js/moment.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('assets/vendors/slimscroll/js/jquery.slimscroll.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('assets/vendors/countUp.js/js/countUp.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('assets/vendors/swiper/js/swiper.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('assets/js/pages/widget2.js')}}"></script>
+
 @stop

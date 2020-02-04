@@ -97,22 +97,22 @@ z-index: 999999">
                         </li>
                         
                         <li {!! (Request::is('cars')? 'class="active"':"") !!}>
-                        <a href="{{ URL('/sewa') }} ">
+                        <a href="{{ URL('/cars') }} ">
                             <i class="fa fa-car"></i>
                             <span class="link-title menu_hide">&nbsp;&nbsp;Sewa Mobil</span>
                         </a>
                         </li>
 
-                         <li {!! (Request::is('cars')? 'class="active"':"") !!}>
-                        <a href="{{ URL('/transaksi') }} ">
+                         <li {!! (Request::is('transaction')? 'class="active"':"") !!}>
+                        <a href="{{ URL('/transaction') }} ">
                             <i class="fa fa-money"></i>
-                            <span class="link-title menu_hide">&nbsp;&nbsp;Transaksi</span>
+                            <span class="link-title menu_hide">&nbsp;&nbsp;Transaction</span>
                         </a>
                         </li>
     
                         <li {!! (Request::is('rented')? 'class="active"':"") !!}>
                         <a href="{{ URL('/pengembalian') }} ">
-                            <i class="fa fa-return"></i>
+                            <i class="fa fa-book"></i>
                             <span class="link-title menu_hide">&nbsp;&nbsp;Pengembalian</span>
                         </a>
                         </li>
@@ -142,8 +142,8 @@ z-index: 999999">
                         <div class="input-group search_bar_small">
                             <input type="text" class="form-control" placeholder="Search..." name="search">
                             <span class="input-group-append">
-        <button class="btn btn-secondary" type="submit"><i class="fa fa-search"></i></button>
-      </span>
+                        <button class="btn btn-secondary" type="submit"><i class="fa fa-search"></i></button>
+                      </span>
                         </div>
                     </div>
                 </div>
@@ -158,6 +158,7 @@ z-index: 999999">
 <!-- global scripts-->
 <script type="text/javascript" src="{{asset('assets/js/components.js')}}"></script>
 <script type="text/javascript" src="{{asset('assets/js/custom.js')}}"></script>
+
 <!-- end of global scripts-->
 <!-- page level js -->
 @yield('footer_scripts')

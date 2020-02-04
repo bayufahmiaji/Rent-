@@ -76,9 +76,16 @@
                             </div>
                         </div>
                         <div class="form-group">
+                            <label for="email" class="col-form-label"> Seat</label>
+                            <div class="input-group input-group-prepend">
+                                <input type="text" class="form-control  form-control-md" required name="Seat" placeholder="Price">
+                            </div>
+                        </div>
+                        <div class="form-group">
                             <label for="image" class="col-form-label"> Image</label>
                             <input type="file" name="file">
                         </div>
+
                     
                      <div class="form-group">
                             <input type="submit" value="Submit" class="btn btn-primary"/>

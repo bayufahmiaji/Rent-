@@ -41,7 +41,7 @@
                 <div class="col-12 data_tables">
                     <div class="card">
                         <div class="card-header bg-white">
-                            <i class="fa fa-table"></i> Lift Of User
+                            <i class="fa fa-table"></i> List Of User
                         </div>
                         <div class="card-body m-t-35">
                             <a href="/car/add" class="btn btn-success">Add Car</a>
@@ -68,7 +68,7 @@
                                         <td>@currency($cars->price)</td>
                                         <td><img width="150px" src="{{ url('/public/uploads/'.$cars->image) }}"></td>
                                         <td>{{$cars->status}}</td>
-                                        <td><a href="" class="btn btn-primary">Update</a>
+                                        <td><a href="/cars/edit/{{$cars->id}}" class="btn btn-primary">Update</a>
                                         <a href="" class="btn btn-danger">Delete</a></td>
                                     </tr>
                                 @endforeach

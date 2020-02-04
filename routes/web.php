@@ -15,15 +15,30 @@ Route::get('/', function () {
     return view('index');
 });
 
-route::get('/login','AuthController@index');
+route::get('/login','AuthController@index')->name('login');
 route::get('/register','AuthController@create');
 
 route::post('/postuser','AuthController@store');
 route::post('/getlogin','AuthController@login');
-route::get('/index','HomeController@index');
 route::get('/logout','AuthController@logout');
 
-route::get('/cars','CarsController@index');
-route::get('/car/add','CarsController@create');
-route::post('/cars/add','CarsController@store');
-route::get('/user','UserController@index');
+Route::group(['middleware' => 'auth'],function(){
+	//admin
+		//home
+		route::get('/index','HomeController@index');
+		//cars
+		route::get('/cars','CarsController@index');
+		route::get('/car/add','CarsController@create');
+		route::post('/cars/add','CarsController@store');
+		route::get('/cars/edit/{cars}','CarsController@edit');
+		//user
+		route::get('/user','UserController@index');
+		//mail
+		route::post('/transaction/add','TransactionsController@store');
+
+	//costumer
+		//transaction
+		route::get('/cars/{cars}/rent','CarsController@edit');
+		route::get('/transaction','TransactionsController@index');
+			
+});

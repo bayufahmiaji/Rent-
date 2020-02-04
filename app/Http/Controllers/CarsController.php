@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Cars;
 use Illuminate\Http\Request;
+use Auth;
 
 class CarsController extends Controller
 {
@@ -13,9 +14,18 @@ class CarsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
+    {   
         $car = Cars::all();
-        return view('admin.car.index',compact('car'));
+        if(Auth::user()->role == "admin"){
+
+            return view('admin.car.index',compact('car'));
+        
+        }
+        else{
+        
+            return view('costumer.car.index',compact('car'));   
+        
+        }
     }
 
     /**
@@ -80,7 +90,14 @@ class CarsController extends Controller
      */
     public function edit(Cars $cars)
     {
-        //
+        if(Auth::user()->role == "admin"){
+
+            return view('admin.car.edit',compact('cars'));
+        
+        }else{
+            return view('costumer.transaction.add',compact('cars'));
+        }
+        
     }
 
     /**

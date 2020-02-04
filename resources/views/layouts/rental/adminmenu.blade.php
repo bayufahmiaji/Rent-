@@ -43,7 +43,7 @@ z-index: 999999">
         <!-- .navbar -->
         <nav class="navbar navbar-static-top">
             <div class="container-fluid m-0">
-                <a class="navbar-brand" href="/kanban">
+                <a class="navbar-brand" href="/index">
                     <h4><img src="{{asset('assets/img/logo Mobil.png')}}" class="admin_img" alt="logo">Bay Rent</h4>
                 </a>
                 <div class="menu mr-sm-auto">
