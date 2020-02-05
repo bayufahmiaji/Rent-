@@ -33,13 +33,19 @@
                         <div class="swiper-container widget_swiper">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
-                                    <img src="{{asset('assets/img/swiper_image1.jpg')}}" alt="Image missing" class="img-fluid"/>
+                                    <img src="{{asset('assets/img/T1.jpg')}}" alt="Image missing" class="img-fluid"/>
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="{{asset('assets/img/swiper_image2.jpg')}}" alt="Image missing" class="img-fluid"/>
+                                    <img src="{{asset('assets/img/T2.jpg')}}" alt="Image missing" class="img-fluid"/>
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="{{asset('assets/img/swiper_image3.jpg')}}" alt="Image missing" class="img-fluid"/>
+                                    <img src="{{asset('assets/img/T3.jpg')}}" alt="Image missing" class="img-fluid"/>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="{{asset('assets/img/T4.jpg')}}" alt="Image missing" class="img-fluid"/>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="{{asset('assets/img/T5.jpg')}}" alt="Image missing" class="img-fluid"/>
                                 </div>
                             </div>
                             <!-- Add Pagination -->
@@ -48,12 +54,13 @@
                         </div>
                     </div>
                 </div>
+                <center><a href="/car" class="btn btn-success"><h2>Rental Mobil Sekarang!</h2></a></center>
 	</div>
 @stop
 @section('footer_scripts')
     <!--  plugin scripts -->
     <script type="text/javascript" src="{{asset('assets/js/pages/index.js')}}"></script>
-        <script type="text/javascript" src="{{asset('assets/vendors/moment/js/moment.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('assets/vendors/moment/js/moment.min.js')}}"></script>
     <script type="text/javascript" src="{{asset('assets/vendors/slimscroll/js/jquery.slimscroll.min.js')}}"></script>
     <script type="text/javascript" src="{{asset('assets/vendors/countUp.js/js/countUp.min.js')}}"></script>
     <script type="text/javascript" src="{{asset('assets/vendors/swiper/js/swiper.min.js')}}"></script>

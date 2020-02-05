@@ -44,7 +44,7 @@ z-index: 999999">
         <nav class="navbar navbar-static-top">
             <div class="container-fluid m-0">
                 <a class="navbar-brand" href="/kanban">
-                    <h4><img src="{{asset('assets/img/logo Mobil.png')}}" class="admin_img" alt="logo">Bay Rent</h4>
+                    <h4><img src="{{asset('assets/img/logo Mobil.png')}}" class="admin_img" alt="logo">JB Rent</h4>
                 </a>
                 <div class="menu mr-sm-auto">
                     <span class="toggle-left" id="menu-toggle">
@@ -110,12 +110,7 @@ z-index: 999999">
                         </a>
                         </li>
     
-                        <li {!! (Request::is('rented')? 'class="active"':"") !!}>
-                        <a href="{{ URL('/pengembalian') }} ">
-                            <i class="fa fa-book"></i>
-                            <span class="link-title menu_hide">&nbsp;&nbsp;Pengembalian</span>
-                        </a>
-                        </li>
+                    
                         </ul>
                         </li>
                         </ul>

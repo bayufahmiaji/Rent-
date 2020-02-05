@@ -41,7 +41,7 @@
                 <div class="col-12 data_tables">
                     <div class="card">
                         <div class="card-header bg-white">
-                            <i class="fa fa-table"></i> Lift Of Transaction
+                            <i class="fa fa-table"></i> List Of Return
                         </div>
                         <div class="card-body m-t-35">
                             <a href="/car/add" class="btn btn-success">Add Car</a>
@@ -49,35 +49,20 @@
                                 <thead>
                                 <tr>
                                     <th>Name</th>
-                                    <th>Email</th>
                                     <th>Car Name</th>
-                                    <th>Price</th>
-                                    <th>Rent Length</th>
-                                    <th>Total</th>
                                     <th>Rent Start</th>
                                     <th>Rent Expired</th>
                                     <th>Status</th>
-                                    <th>Action</th>
                                 </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach($transactions as $trans)
+                                    @foreach($return as $ret)
                                     <tr>
-                                    <td>{{$trans->name_user}}</td>
-                                    <td>{{$trans->email}}</td>
-                                    <td>{{$trans->car_name}}</td>
-                                    <td>@currency($trans->price)</td>
-                                    <td>{{$trans->qty}}</td>
-                                    <td>@currency($trans->total)</td>
-                                    <td>{{$trans->rent_date}}</td>
-                                    <td>{{$trans->rent_expired}}</td>
-                                    @if($trans->status == "Lunas")
-                                        <td class="btn-success" align="center">{{$trans->status}} </td>
-                                    @else
-                                        <td class="btn-danger" align="center">{{$trans->status}} </td>
-                                    @endif
-                                    <td><a href="/transaction/{{$trans->id}}/edit" class="btn btn-primary">Update</a>
-                                        <a href="/return/{{$trans->id}}/add" class="btn btn-warning">Return</a></td>
+                                    <td>{{$ret->cos_name}}</td>
+                                    <td>{{$ret->car_name}}</td>
+                                    <td>{{$ret->rent_date}}</td>
+                                    <td>{{$ret->rent_expired}}</td>
+                                    
                                     
                                     </tr>
                                     @endforeach
@@ -85,15 +70,10 @@
                                 <tfoot>
                                 <tr>
                                     <th>Name</th>
-                                    <th>Email</th>
                                     <th>Car Name</th>
-                                    <th>Price</th>
-                                    <th>Rent Length</th>
-                                    <th>Total</th>
                                     <th>Rent Start</th>
                                     <th>Rent Expired</th>
                                     <th>Status</th>
-                                    <th>Action</th>
                                 </tr>
                                 </tfoot>
                             </table>

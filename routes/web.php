@@ -35,6 +35,13 @@ Route::group(['middleware' => 'auth'],function(){
 		route::get('/user','UserController@index');
 		//mail
 		route::post('/transaction/add','TransactionsController@store');
+		//transaction
+		route::get('/transaction/{transaction}/edit','TransactionsController@edit');
+		route::post('/transaction/{id}/update','TransactionsController@update');
+		//return
+		route::get('/return/{transaction}/add','TransactionsController@show');
+		route::post('/return/add','ReturnsController@store');
+		route::get('/return','ReturnsController@index');
 
 	//costumer
 		//transaction

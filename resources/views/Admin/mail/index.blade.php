@@ -13,8 +13,8 @@
     <p>Nama  		 : {{$nama}}</p>
     <p>Email 		 : {{$email}}</p>
     <p>Mobil 		 : {{$mobil}}</p>
-    <p>Harga 		 : @currency($harga)</p>
-    <p>lama  		 : {{$lama}}</p>
+    <p>Harga/hari    : @currency($harga)</p>
+    <p>Lama Rental   : {{$lama}} Hari</p>
     <p>untuk tanggal : {{$tgl}}</p>
     <p>Total 		 : @currency($total)</p>
 

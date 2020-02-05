@@ -3,8 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Transaction;
+use App\Cars;
+use App\Balance;
 use Mail;
 use Auth;
+use DB;
 use Illuminate\Http\Request;
 
 class TransactionsController extends Controller
@@ -19,7 +22,7 @@ class TransactionsController extends Controller
         $user = Auth::user()->id;
         if(Auth::user()->role == "admin"){
             $transactions = Transaction::all();
-            return view('costumer.transaction.index',compact('transactions'));
+            return view('Admin.Transaksi.index',compact('transactions'));
         }else{
             $transaction = Transaction::where('user_id',$user)->get();
             return view('costumer.transaction.index',compact('transaction')); 
@@ -85,7 +88,7 @@ class TransactionsController extends Controller
      */
     public function show(Transaction $transaction)
     {
-        //
+        return view('Admin.return.add',compact('transaction'));
     }
 
     /**
@@ -96,7 +99,7 @@ class TransactionsController extends Controller
      */
     public function edit(Transaction $transaction)
     {
-        //
+        return view('Admin.Transaksi.edit',compact('transaction'));
     }
 
     /**
@@ -106,9 +109,32 @@ class TransactionsController extends Controller
      * @param  \App\Transaction  $transaction
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Transaction $transaction)
+    public function update(Request $request,$id)
     {
-        //
+        //update transaksi
+        $trans = Transaction::find($id);
+        $trans->status = $request->status;
+        $trans->update();
+
+        //update car status
+        if($request->status == "Lunas"){
+            $status = "Rented";
+        }else{
+            $status= "Available";
+        }
+
+        $cars = Cars::find($request->car_id);
+        $cars->status = $status;
+        $cars->update();
+
+        //add data to balances
+        $saldo =  DB::table("balances")->get()->sum("balance");
+        $balance = new Balance;
+        $balance->income = $request->totall;
+        $balance->balance = $saldo+$request->totall;
+        $balance->save();
+
+        return redirect('/transaction');
     }
 
     /**
