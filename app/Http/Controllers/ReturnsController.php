@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Returns;
+use App\Cars;
 use Illuminate\Http\Request;
 
 class ReturnsController extends Controller
@@ -36,7 +37,22 @@ class ReturnsController extends Controller
      */
     public function store(Request $request)
     {
-        Returns::create($request->all());
+        $return = new Returns;
+        $return->cos_name = $request->cos_name;
+        $return->rent_date = $request->rent_date;
+        $return->rent_expired = $request->rent_expired;
+        $return->status = $request->status;
+        $return->car_name = $request->car_name;
+        $return->save();
+
+        if($request->status == "Lunas"){
+            $status = "Available";
+        }
+
+        $cars = Cars::find($request->car_id);
+        $cars->status = $status;
+        $cars->update();
+
         return redirect('/return');
     }
 

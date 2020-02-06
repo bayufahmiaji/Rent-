@@ -112,7 +112,7 @@ z-index: 999999">
                         <!-- Menu Inkubator Bisnis -->
                         <li {!! (Request::is('transaction')? 'class="active"':"") !!}>
                         <a href="{{ URL('/transaction') }} ">
-                            <i class="fa fa-money"></i>
+                            <i class="fa fa-backward"></i>
                             <span class="link-title menu_hide">&nbsp;&nbsp;Transaction List</span>
                         </a>
                         </li>
@@ -120,6 +120,12 @@ z-index: 999999">
                         <a href="{{ URL('/return') }} ">
                             <i class="fa fa-book"></i>
                             <span class="link-title menu_hide">&nbsp;&nbsp;Return List</span>
+                        </a>
+                        </li>
+                        <li {!! (Request::is('balance')? 'class="active"':"") !!}>
+                        <a href="{{ URL('/balance') }} ">
+                            <i class="fa fa-money"></i>
+                            <span class="link-title menu_hide">&nbsp;&nbsp;Balance</span>
                         </a>
                         </li>
                         </ul>

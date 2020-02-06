@@ -42,6 +42,8 @@ Route::group(['middleware' => 'auth'],function(){
 		route::get('/return/{transaction}/add','TransactionsController@show');
 		route::post('/return/add','ReturnsController@store');
 		route::get('/return','ReturnsController@index');
+		//balance
+		route::get('/balance','BalancesController@index');
 
 	//costumer
 		//transaction

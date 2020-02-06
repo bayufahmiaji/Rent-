@@ -93,7 +93,7 @@ z-index: 999999">
                                     <span class="input-group-text border-right-0">
                                         <i class="fa fa-key text-primary"></i>
                                     </span>
-                                        <input type="password" placeholder="Confirm Password" name="confirmpassword" id="confirmpassword" class="form-control" />
+                                        <input type="password" placeholder="Confirm Password"  id="confirmpassword" class="form-control" />
                                     </div>
                                 </div>
                             </div>

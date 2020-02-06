@@ -14,7 +14,8 @@ class BalancesController extends Controller
      */
     public function index()
     {
-        //
+        $balance = Balance::all();
+        return view('Admin.saldo.index',compact('balance'));
     }
 
     /**

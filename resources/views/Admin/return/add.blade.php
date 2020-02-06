@@ -39,7 +39,7 @@
                 @endif
               <form method="POST" action="/return/add">
                     {{csrf_field()}}
-                    
+                    <input type="hidden" name="car_id" value="{{$transaction->car_id}}">
                     <div class="form-group">
                         <label for="email" class="col-form-label"> Name</label>
                         <div class="input-group input-group-prepend">

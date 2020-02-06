@@ -2,7 +2,7 @@
 {{-- Page title --}}
 @section('title')
     
-   Return List
+   Balance List
 @stop
 {{-- page level styles --}}
 @section('header_styles')
@@ -41,38 +41,31 @@
                 <div class="col-12 data_tables">
                     <div class="card">
                         <div class="card-header bg-white">
-                            <i class="fa fa-table"></i> List Of Return
+                            <i class="fa fa-table"></i> List Of Balance
                         </div>
                         <div class="card-body m-t-35">
-                            <a href="/car/add" class="btn btn-success">Add Car</a>
                             <table id="example1" class="display table table-stripped table-bordered">
                                 <thead>
                                 <tr>
-                                    <th>Name</th>
-                                    <th>Car Name</th>
-                                    <th>Rent Start</th>
-                                    <th>Rent Expired</th>
-                                    <th>Status</th>
+                                    <th>Date</th>
+                                    <th>Income</th>
+                                    <th>saldo </th>
                                 </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach($return as $ret)
+                                    @foreach($balance as $bal)
                                     <tr>
-                                    <td>{{$ret->cos_name}}</td>
-                                    <td>{{$ret->car_name}}</td>
-                                    <td>{{$ret->rent_date}}</td>
-                                    <td>{{$ret->rent_expired}}</td>
-                                    <td class="bg-success">{{$ret->status}}</td>
+                                    <td>{{$bal->created_at}}</td>
+                                    <td>@currency($bal->income)</td>
+                                    <td>@currency($bal->balance)</td>
                                     </tr>
                                     @endforeach
                                 </tbody>
                                 <tfoot>
                                 <tr>
-                                    <th>Name</th>
-                                    <th>Car Name</th>
-                                    <th>Rent Start</th>
-                                    <th>Rent Expired</th>
-                                    <th>Status</th>
+                                    <th>Date</th>
+                                    <th>Income</th>
+                                    <th>saldo </th>
                                 </tr>
                                 </tfoot>
                             </table>

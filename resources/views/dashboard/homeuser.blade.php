@@ -2,13 +2,14 @@
 {{-- Page title --}}
 @section('title')
     
-    Selamat Datang JB Rent 
+    Selamat Datang di JB Rent 
 @stop
 {{-- page level styles --}}
 @section('header_styles') <!--Page level styles-->
     <link type="text/css" rel="stylesheet" href="{{asset('assets/vendors/swiper/css/swiper.min.css')}}"/>
     <!-- end of page level styles -->
     <link rel="stylesheet" type="text/css" href="{{asset('assets/css/pages/widgets.css')}}">
+    
 @stop
 
 
@@ -27,6 +28,8 @@
             </div>
         </div>
     </header>
+    <center><a href="/cars" class="btn btn-success" >Rental Mobil Sekarang !</a></center>
+                
     <div class="outer">
                <div class="row">
                     <div class="col-lg-12">
@@ -54,7 +57,6 @@
                         </div>
                     </div>
                 </div>
-                <center><a href="/car" class="btn btn-success"><h2>Rental Mobil Sekarang!</h2></a></center>
 	</div>
 @stop
 @section('footer_scripts')
