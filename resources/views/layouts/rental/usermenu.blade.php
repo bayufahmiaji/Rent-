@@ -69,9 +69,7 @@ z-index: 999999">
                                 <span class="fa fa-sort-down white_bg"></span>
                             </button>
                             <div class="dropdown-menu admire_admin">
-                                <a class="dropdown-item" href="/edit_user"><i class="fa fa-cogs"></i>
-                                    Account Settings</a>
-                                <a class="dropdown-item" href="/logout"><i class="fa fa-sign-out"></i>
+                               <a class="dropdown-item" href="/logout"><i class="fa fa-sign-out"></i>
                                     Log Out</a>
                             </div>
                         </div>

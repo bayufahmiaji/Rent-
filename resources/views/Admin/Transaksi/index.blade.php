@@ -44,7 +44,7 @@
                             <i class="fa fa-table"></i> Lift Of Transaction
                         </div>
                         <div class="card-body m-t-35">
-                            <a href="/car/add" class="btn btn-success">Add Car</a>
+                            
                             <table id="example1" class="display table table-stripped table-bordered">
                                 <thead>
                                 <tr>
@@ -76,7 +76,8 @@
                                     @else
                                         <td class="btn-danger" align="center">{{$trans->status}} </td>
                                     @endif
-                                    <td><a href="/transaction/{{$trans->id}}/edit" class="btn btn-primary">Update</a>
+                                    <td><a href="/transaction/{{$trans->id}}/edit" class="btn btn-primary">     Update</a>
+                                        <a href="/transaction/{{$trans->id}}/delete" class="btn btn-danger">     delete</a>
                                         <a href="/return/{{$trans->id}}/add" class="btn btn-warning">Return</a></td>
                                     
                                     </tr>

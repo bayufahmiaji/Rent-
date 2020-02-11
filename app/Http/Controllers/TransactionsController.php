@@ -128,7 +128,7 @@ class TransactionsController extends Controller
         $cars->update();
 
         //add data to balances
-        $saldo =  DB::table("balances")->get()->sum("balance");
+        $saldo =  DB::table("balances")->get()->max("balance");
         $balance = new Balance;
         $balance->income = $request->totall;
         $balance->balance = $saldo+$request->totall;
@@ -145,6 +145,7 @@ class TransactionsController extends Controller
      */
     public function destroy(Transaction $transaction)
     {
-        //
+        $transaction->delete($transaction);
+        return back();
     }
 }

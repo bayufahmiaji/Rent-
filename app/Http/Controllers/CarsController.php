@@ -79,7 +79,9 @@ class CarsController extends Controller
      */
     public function show(Cars $cars)
     {
-        //
+
+
+         
     }
 
     /**
@@ -107,9 +109,19 @@ class CarsController extends Controller
      * @param  \App\Cars  $cars
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Cars $cars)
+    public function update(Request $request,$id)
     {
-        //
+         
+        $car = Cars::find($id);
+
+        $car->name = $request->name;
+        $car->type = $request->type;
+        $car->No = $request->no;
+        $car->year= $request->year;
+        $car->status=$request->status;
+        $car->update();
+
+        return redirect('/cars');
     }
 
     /**
@@ -120,6 +132,7 @@ class CarsController extends Controller
      */
     public function destroy(Cars $cars)
     {
-        //
+        $cars->delete($cars);
+        return back();
     }
 }

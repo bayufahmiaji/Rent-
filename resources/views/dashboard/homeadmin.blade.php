@@ -46,7 +46,7 @@
                                     <i class="fa fa-users"></i>
                                 </div>
                                 <div class="user_font">Users</div>
-                                <div id="widget_countup12">1</div>
+                                <div id="widget_countup12">{{$countU}}</div>
                                 
                             </div>
                         </div>
@@ -56,7 +56,7 @@
                                     <div class="float-right m-t-5">
                                         <i class="fa fa-users text-primary"></i>
                                     </div>
-                                    <div id="widget_countup12">1</div>
+                                    <div id="widget_countup12">{{$countU}}</div>
                                     <div>Users</div>
                                 </div>
                             </div>
@@ -71,7 +71,7 @@
                                     <i class="fa fa-car"></i>
                                 </div>
                                 <div class="user_font">Cars</div>
-                                <div id="widget_countup12">1</div>
+                                <div id="widget_countup12">{{$countC}}</div>
                                 
                             </div>
                         </div>
@@ -81,7 +81,7 @@
                                     <div class="float-right m-t-5">
                                         <i class="fa fa-car text-primary"></i>
                                     </div>
-                                    <div id="widget_countup12">1</div>
+                                    <div id="widget_countup12">{{$countC}}</div>
                                     <div>Cars</div>
                                 </div>
                             </div>
@@ -98,7 +98,7 @@
                                     <i class="fa fa-book"></i>
                                 </div>
                                 <div class="user_font">Rented</div>
-                                <div id="widget_countup12">1</div>
+                                <div id="widget_countup12">{{$countR}}</div>
                                 
                             </div>
                         </div>
@@ -109,7 +109,7 @@
                                     <div class="float-right m-t-5 text-success">
                                         <i class="fa fa-book"></i>
                                     </div>
-                                    <div id="widget_countup22">1</div>
+                                    <div id="widget_countup22">{{$countR}}</div>
                                     <div>Rented</div>
                                 </div>
                             </div>
@@ -125,7 +125,7 @@
                                     <i class="fa fa-money"></i>
                                 </div>
                                 <div class="user_font">Balance</div>
-                                <div id="widget_countup12">1</div>
+                                <div class="user_font">@currency($saldo)</div>
                             </div>
                         </div>
 
@@ -135,7 +135,7 @@
                                     <div class="float-right m-t-5 text-success">
                                         <i class="fa fa-money"></i>
                                     </div>
-                                    <div id="widget_countup22">1</div>
+                                    <div id="widget_countup22"><h4>@currency($saldo)</h4></div>
                                     <div>Rented</div>
                                 </div>
                             </div>

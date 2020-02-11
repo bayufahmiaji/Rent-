@@ -2,7 +2,7 @@
 {{-- Page title --}}
 @section('title')
     
-    @parent
+    User JB Rent
 @stop
 {{-- page level styles --}}
 @section('header_styles')
@@ -63,8 +63,8 @@
                                     <td>{{$users -> email}}</td>
                                     <td>{{$users -> role}}</td>
                                     <td>{{$users -> created_at}}</td>
-                                    <td><a href="" class="btn btn-primary">Details</a>
-                                        <a href="" class="btn btn-danger">Delete</a></td>
+                                    <td><a href="/user/{{$users->id}}/edit" class="btn btn-primary">Update</a>
+                                        <a href="/user/{{$user->id}}/delete" class="btn btn-danger">Delete</a></td>
                                 </tr>
                                 @endforeach
                                 </tbody>

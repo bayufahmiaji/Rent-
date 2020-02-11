@@ -69,7 +69,7 @@
                                         <td><img width="150px" src="{{ url('/public/uploads/'.$cars->image) }}"></td>
                                         <td>{{$cars->status}}</td>
                                         <td><a href="/cars/edit/{{$cars->id}}" class="btn btn-primary">Update</a>
-                                        <a href="" class="btn btn-danger">Delete</a></td>
+                                        <a href="/car/{{$cars->id}}/delete" class="btn btn-danger" onclick="return confirm('Delete Car?')">Delete</a></td>
                                     </tr>
                                 @endforeach
                                 </tbody>

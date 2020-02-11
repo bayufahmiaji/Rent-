@@ -54,7 +54,7 @@
                         <div class="form-group">
                             <label for="email" class="col-form-label"> Year</label>
                             <div class="input-group input-group-prepend">
-                                <input type="text" class="form-control  form-control-md" required name="year" placeholder="Year">
+                                <input type="number" class="form-control  form-control-md" required name="year" placeholder="Year">
                             </div>
                         </div>
                         <div class="form-group">
@@ -66,21 +66,10 @@
                         <div class="form-group">
                             <label for="email" class="col-form-label"> Price</label>
                             <div class="input-group input-group-prepend">
-                                <input type="text" class="form-control  form-control-md" required name="price" placeholder="Price">
+                                <input type="number" class="form-control  form-control-md" required name="price" placeholder="Price">
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label for="email" class="col-form-label"> status</label>
-                            <div class="input-group input-group-prepend">
-                                <input type="text" class="form-control  form-control-md" required name="status" placeholder="status">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="email" class="col-form-label"> Seat</label>
-                            <div class="input-group input-group-prepend">
-                                <input type="text" class="form-control  form-control-md" required name="Seat" placeholder="Price">
-                            </div>
-                        </div>
+                        <input type="hidden" name="status" value="available">
                         <div class="form-group">
                             <label for="image" class="col-form-label"> Image</label>
                             <input type="file" name="file">

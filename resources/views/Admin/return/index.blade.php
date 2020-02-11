@@ -44,7 +44,7 @@
                             <i class="fa fa-table"></i> List Of Return
                         </div>
                         <div class="card-body m-t-35">
-                            <a href="/car/add" class="btn btn-success">Add Car</a>
+                           
                             <table id="example1" class="display table table-stripped table-bordered">
                                 <thead>
                                 <tr>

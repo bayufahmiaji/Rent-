@@ -1,4 +1,4 @@
-@extends(('layouts/rental/adminmenu'))
+@extends(('layouts/rental/usermenu'))
 {{-- Page title --}}
 @section('title')
     Rent A Car

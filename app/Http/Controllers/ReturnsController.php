@@ -46,7 +46,7 @@ class ReturnsController extends Controller
         $return->save();
 
         if($request->status == "Lunas"){
-            $status = "Available";
+            $status = "available";
         }
 
         $cars = Cars::find($request->car_id);

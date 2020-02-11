@@ -44,9 +44,13 @@
                             @else
                             <li class="btn btn-danger" style="list-style-type: none; "> {{$trans->status}}</li>
                             @endif
+                            <a href="/transaction/{{$trans->id}}/delete"  class="btn btn-warning">Cancel</a>
                                         
-                    </ul>
-                </td>
+                        </ul>
+                    </td>
+                    <td align="right">
+                    </td>
+
                   </tr>
                   
               </table>  
